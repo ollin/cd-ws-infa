@@ -1,3 +1,12 @@
+# Docker Compose Project for CI/CD Workshop
+
+* jenkins
+* gogs
+* sonatype nexus
+* docker registy
+* nginx as reverse proxy
+* postgress
+
 ## Wenn man alles von Anfang an machen will:
 
 * stoppe und entferne alle Container
