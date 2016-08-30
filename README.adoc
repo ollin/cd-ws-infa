@@ -3,7 +3,7 @@
 * jenkins
 * gogs
 * sonatype nexus
-* docker registy
+* docker registry
 * nginx as reverse proxy
 * postgress
 
