@@ -1,4 +1,4 @@
-FROM jenkins:2.7.2
+FROM jenkins:2.7.3
 MAINTAINER Oliver Nautsch
 USER root
 RUN apt-get update && \
