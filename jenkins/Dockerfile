@@ -13,4 +13,10 @@ RUN apt-get update && \
 COPY plugins.txt /usr/share/jenkins/ref/
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
 ENV JAVA_OPTS=-Djenkins.install.runSetupWizard=false
-USER jenkins
+RUN apt-get update && \
+    apt-get install sudo && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+COPY run.sh ./run.sh
+RUN chmod +x ./run.sh
+ENTRYPOINT ["/bin/bash","-c","./run.sh"]
