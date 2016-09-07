@@ -14,7 +14,9 @@ COPY plugins.txt /usr/share/jenkins/ref/
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
 ENV JAVA_OPTS=-Djenkins.install.runSetupWizard=false
 RUN apt-get update && \
-    apt-get install sudo && \
+    apt-get install -y sudo python-setuptools && \
+    easy_install pip && \
+    pip install docker-compose && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 COPY run.sh ./run.sh
