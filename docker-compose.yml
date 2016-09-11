@@ -26,6 +26,11 @@ services:
           - git.nautsch.net
           - nexus.nautsch.net
           - registry.nautsch.net
+          - aat.address.nautsch.net
+          - uat.address.nautsch.net
+          - extest.address.nautsch.net
+          - demo.address.nautsch.net
+          - address.nautsch.net
     restart: always
 
   ci:
