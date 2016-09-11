@@ -13,12 +13,8 @@ RUN apt-get update && \
 COPY plugins.txt /usr/share/jenkins/ref/
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
 ENV JAVA_OPTS=-Djenkins.install.runSetupWizard=false
-RUN apt-get update && \
-    apt-get install -y sudo python-setuptools && \
-    easy_install pip && \
-    pip install docker-compose && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && \
+    chmod +x /usr/local/bin/docker-compose
 COPY run.sh ./run.sh
 RUN chmod +x ./run.sh
 ENTRYPOINT ["/bin/bash","-c","./run.sh"]
