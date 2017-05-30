@@ -50,7 +50,7 @@ services:
     restart: always
 
   git:
-    image: gogs/gogs:0.9.113
+    image: gogs/gogs:0.11.4
     container_name: git
     dns_search: .
     ports:

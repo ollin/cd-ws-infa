@@ -1,3 +1,11 @@
+== Hinzufuegen via Gui als Vorbereitung fuer script
+
+* blueocean -Blue Ocean
+* build-environment - Build Environment Plugin
+* jacoco - JaCoCo plugin
+* job-dsl - Job DSL
+* saferestart - Safe Restart Plugin
+
 == Find all Plugins (for plugin.sh)
 
 . Inside jenkins -> manage jenkins -> sript
