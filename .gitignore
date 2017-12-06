@@ -24,3 +24,4 @@ atlassian-ide-plugin.xml
 # idea
 .idea
 *.iml
+/s101plugin.state
