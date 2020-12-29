@@ -1,11 +1,28 @@
-# Docker Compose Project for CI/CD Workshop
+# Docker Compose Project for a simple CI/CD Infrastructure
 
-* jenkins
-* gogs
-* sonatype nexus
-* docker registry
-* nginx as reverse proxy
-* postgress
+Includes:
+
+* CI/CD server (jenkins)
+* Git repository manager (to manage git repositories, using gogs)
+* artefact nexus (Sonatype Nexus to store and manage artefacts: jar, npm, ...)
+* docker registry (to store and manage docker images)
+* database (postgress)
+* edge router/reverse proxy ()
+
+## Roadmap
+
+Plan per 2020-12-29 is to reactivate project, because CI/CD is not
+done in the world. :)
+
+* [ ] upgrade infrastructure
+** [ ] replace jwilder/nginx-proxy with traefi.io
+*** better documentation,
+*** active development
+** [ ] upgrade jenkins
+** [ ] upgrade gogs
+** [ ] upgrade postgress
+** [ ] upgrade nexus
+** [ ] upgrade docker registry
 
 ## Wenn man alles von Anfang an machen will:
 
